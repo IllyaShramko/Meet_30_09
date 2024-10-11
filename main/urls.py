@@ -16,7 +16,8 @@ main_project.register_blueprint(blueprint= tour.tour_app)
 
 user.user_app.add_url_rule(
     rule= "/registration/",
-    view_func= user.render_registration
+    view_func= user.render_registration,
+    methods= ["GET", "POST"]
 )
 user.user_app.add_url_rule(
     rule= "/login/",

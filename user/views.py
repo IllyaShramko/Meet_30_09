@@ -9,7 +9,7 @@ def render_registration():
         
 
         user = User(
-            login = flask.request.form['login'],
+            username = flask.request.form['username'],
             password = flask.request.form['password'],
         )
         try:
@@ -20,6 +20,6 @@ def render_registration():
             return "Не вдалося створити користувача"  
     print(confirmed)
     return flask.render_template(
-        template_name_or_list='register.html')
+        template_name_or_list='registration.html')
 def render_login():
     return flask.render_template("login.html")
