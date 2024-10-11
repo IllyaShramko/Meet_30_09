@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Tours
+{% endblock %}
+
+{% block content %}
+    {% for ticket in tickets %}
+        <div>
+            <form method="POST">
+                <p class="title">{{ ticket.title }}</p>
+                <p class="date">{{ ticket.date }}</p>
+                <p class="country">{{ ticket.country }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
