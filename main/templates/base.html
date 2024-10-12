@@ -7,9 +7,12 @@
     <body>
         <a href="/">Home</a>
         <a href="/tour/">Tour</a>
-        <a href="/login/">Login</a>
-        <a href="/registration/">Registration</a>
-        
+        {% if not auth %}
+            <a href="/login/">Login</a>
+            <a href="/registration/">Registration</a>
+        {% else %}
+            {{ username }}
+        {% endif %}
         {% block content %}
 
         {% endblock %}

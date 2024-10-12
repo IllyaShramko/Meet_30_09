@@ -15,11 +15,20 @@ def render_registration():
         try:
             DATABASE.session.add(user)
             DATABASE.session.commit()
-            return flask.redirect("/login/")
+            confirmed = True
+            # return flask.redirect("/login/")
         except:
             return "Не вдалося створити користувача"  
     print(confirmed)
     return flask.render_template(
-        template_name_or_list='registration.html')
+        template_name_or_list='registration.html', 
+        show_confirmed = confirmed)
 def render_login():
-    return flask.render_template("login.html")
+    if flask.request.method == "POST":
+        for user in User.query.filter_by(username = flask.request.form['username']):
+            
+            if user.password == flask.request.form['password']:
+                flask_login.login_user(user)
+                return flask.redirect('/')
+        return "невірний пароль"
+    return flask.render_template('login.html')

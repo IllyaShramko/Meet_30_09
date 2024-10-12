@@ -3,6 +3,10 @@
 {% block title %}
 registration
 {% endblock %}
+<!-- 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('registration.static', filename= '/css/registration.css') }}">
+{% endblock %} -->
 
 {% block content %}
     <h1>registration Page</h1>
@@ -13,4 +17,11 @@ registration
         <input type="text" name="password">
         <button type="submit">Send</button>
     </form>
+    {% if show_confirmed %}
+        <!-- <div></div> -->
+        <div class="confirmed">
+            <h1>Succefuly</h1>
+            <a href="/login/">login</a>
+        </div>
+    {% endif %}
 {% endblock %}
