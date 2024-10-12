@@ -6,4 +6,17 @@
 
 {% block content %}
     <h1>Tour</h1>
+    {% for ticket in tickets %}
+        <div>
+            <h2>{{ ticket.title }}</h2>
+            <p>Date: {{ ticket.date }}</p>
+            <p>Country: {{ ticket.Сountry }}</p>
+            <p>Price: {{ ticket.price }}</p>
+            <p>Discriprion: {{ ticket.discriprion }}</p>
+            <form method="post">
+                <button type="submit" name="button">Check</button>
+            </form>
+            <hr>
+        </div>
+    {% endfor %}
 {% endblock %}

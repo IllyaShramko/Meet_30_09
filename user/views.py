@@ -26,7 +26,6 @@ def render_registration():
 def render_login():
     if flask.request.method == "POST":
         for user in User.query.filter_by(username = flask.request.form['username']):
-            
             if user.password == flask.request.form['password']:
                 flask_login.login_user(user)
                 return flask.redirect('/')

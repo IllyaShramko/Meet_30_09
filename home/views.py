@@ -1,4 +1,5 @@
 import flask
+from flask_login import current_user
 from main.settings import DATABASE
 from main.flask_config import mail
 import flask_mail
@@ -18,6 +19,14 @@ def render_home():
             print("2")
         except Exception as e:
             print(e)
-    return flask.render_template("home.html")
+    try:
+        username = current_user.username
+    except Exception as e:
+        print(e)
+        username = "1"
+    return flask.render_template("home.html",
+        is_auth = current_user.is_authenticated,
+        username = username
+        )
     
         

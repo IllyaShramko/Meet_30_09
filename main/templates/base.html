@@ -7,7 +7,8 @@
     <body>
         <a href="/">Home</a>
         <a href="/tour/">Tour</a>
-        {% if not auth %}
+        <a href="/tours/">Tours</a>
+        {% if not is_auth %}
             <a href="/login/">Login</a>
             <a href="/registration/">Registration</a>
         {% else %}
