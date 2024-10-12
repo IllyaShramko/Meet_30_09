@@ -1,3 +1,4 @@
+
 import flask
 from .settings import main_project
 import home, tour, user
@@ -8,13 +9,6 @@ home.home_page.add_url_rule(
     methods= ["GET", "POST"]
 )
 main_project.register_blueprint(blueprint= home.home_page)
-
-tour.tour_app.add_url_rule(
-    rule= "/tour/",
-    view_func= tour.render_tour,
-    methods= ["GET", "POST"]
-)
-main_project.register_blueprint(blueprint= tour.tour_app)
 
 user.user_app.add_url_rule(
     rule= "/registration/",
@@ -27,3 +21,15 @@ user.user_app.add_url_rule(
     methods= ["GET", "POST"]
 )
 main_project.register_blueprint(blueprint= user.user_app)
+
+tour.tour_app.add_url_rule(
+    rule = "/tour/",
+    view_func = tour.render_tour,
+    methods = ["GET", "POST"]
+)
+tour.tour_app.add_url_rule(
+    rule = "/tours/",
+    view_func = tour.render_tours,
+    methods = ["GET", "POST"]
+)
+main_project.register_blueprint(blueprint= tour.tour_app)

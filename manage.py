@@ -1,4 +1,3 @@
 import main
-
-if __name__ == "__main__":
-    main.main_project.run(debug= True)
+if __name__ == '__main__':
+    main.main_project.run(debug=True)

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Tours
+{% endblock %}
+
+{% block content %}
+    <h1>Tours</h1>
+    {% for ticket in tickets %}
+        <div>
+            <h2><a href="{{ url_for('render_tours', tour_id=ticket.id) }}">{{ ticket.title }}</a></h2>
+            <p>Date: {{ ticket.date }}</p>
+            <p>Country: {{ ticket.country }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %}
