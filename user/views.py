@@ -23,6 +23,7 @@ def render_registration():
     return flask.render_template(
         template_name_or_list='registration.html', 
         show_confirmed = confirmed)
+
 def render_login():
     if flask.request.method == "POST":
         for user in User.query.filter_by(username = flask.request.form['username']):

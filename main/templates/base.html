@@ -5,15 +5,16 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/tour/">Tour</a>
-        <a href="/tours/">Tours</a>
         {% if not is_auth %}
             <a href="/login/">Login</a>
             <a href="/registration/">Registration</a>
         {% else %}
+            <a href="/">Home</a>
+            <a href="/tour/">Tour</a>
+            <a href="/tours/">Tours</a>
             {{ username }}
         {% endif %}
+        
         {% block content %}
 
         {% endblock %}

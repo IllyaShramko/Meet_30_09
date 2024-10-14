@@ -14,7 +14,7 @@ def render_home():
                 subject = "Відгук від клієнта",
                 body = text_message,
                 recipients = ["123illya123123r@gmail.com"],
-                sender= "artemvaschenko83@gmail.com"
+                sender= flask.request.form["client_email"]
             )
             print("1")
             mail.send(text_message1)

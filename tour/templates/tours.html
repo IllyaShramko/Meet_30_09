@@ -6,6 +6,9 @@
 
 {% block content %}
     <h1>Tours</h1>
+    <form method="post">
+        <button type="submit">create tour</button>
+    </form>
     {% for ticket in tickets %}
         <div>
             <hr>
@@ -13,11 +16,8 @@
             <p>Date: {{ ticket.date }}</p>
             <p>Country: {{ ticket.Country }}</p>
             <form method="post">
-                <button type="submit" id="{{ticket.id}}" name="button">Check all information about {{ ticket.id  }} tour</button>
+                <button type="submit" id="{{ticket.id}}" name="button" value="{{ticket.id}}">Check all information about this tour</button>
             </form>
         </div>
     {% endfor %}
-    <!-- <form method="post">
-        <button type="submit">create tour</button>
-    </form> -->
 {% endblock %}
