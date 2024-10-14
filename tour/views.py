@@ -8,19 +8,19 @@ ticket_choosen = False
 def render_tours():
     global tour_id, ticket_choosen
     if flask.request.method == 'POST':
-        # tour_id = flask.request.form["button"]
-        # ticket_choosen = True
+        tour_id = flask.request.form["button"]
+        ticket_choosen = True
 
         print(tour_id)
-        tickets = Ticket(
-            title = "Ticket to visit Sun",
-            date = "01.09.2077", 
-            Country = "Great Britan",
-            price = 35999999,
-            descriprion = "IT`S HOT😡👹 AND SOOOO COLDDD 🤯🥶🦐 BUT YOU CAN BUY GRILL FOR 20 BILLIONS")
-        DATABASE.session.add(tickets)
-        DATABASE.session.commit()
-        # return flask.redirect('/tour/')
+        # tickets = Ticket(
+        #     title = "Ticket to visit Sun",
+        #     date = "01.09.2077", 
+        #     Country = "Great Britan",
+        #     price = 35999999,
+        #     descriprion = "IT`S HOT😡👹 AND SOOOO COLDDD 🤯🥶🦐 BUT YOU CAN BUY GRILL FOR 20 BILLIONS")
+        # DATABASE.session.add(tickets)
+        # DATABASE.session.commit()
+        return flask.redirect('/tour/')
     try:
         username = current_user.username
     except Exception as e:
