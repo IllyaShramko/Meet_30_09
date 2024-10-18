@@ -4,6 +4,8 @@
     Tours
 {% endblock %}
 
+
+
 {% block content %}
     <h1>Tours</h1>
     <!-- <form method="post">
@@ -12,12 +14,12 @@
     {% for ticket in tickets %}
         <div>
             <hr>
-            <h2>{{ ticket.title }}</h2>
+            <form method="post">
+                <button style="background-color: white; border:0px;" type="submit" id="{{ticket.id}}" name="button" value="{{ticket.id}}"><h2 style="height: 10px;">{{ ticket.title }}</h2></button>
+            </form>
             <p>Date: {{ ticket.date }}</p>
             <p>Country: {{ ticket.Country }}</p>
-            <form method="post">
-                <button type="submit" id="{{ticket.id}}" name="button" value="{{ticket.id}}">Check all information about this tour</button>
-            </form>
+                <!-- <button type="submit" id="{{ticket.id}}" name="button" value="{{ticket.id}}">Check all information about this tour</button> -->
         </div>
     {% endfor %}
 {% endblock %}
