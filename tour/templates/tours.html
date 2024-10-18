@@ -4,14 +4,22 @@
     Tours
 {% endblock %}
 
+
+
 {% block content %}
     <h1>Tours</h1>
+    <!-- <form method="post">
+        <button type="submit">create tour</button>
+    </form> -->
     {% for ticket in tickets %}
         <div>
-            <h2><a href="{{ url_for('render_tours', tour_id=ticket.id) }}">{{ ticket.title }}</a></h2>
-            <p>Date: {{ ticket.date }}</p>
-            <p>Country: {{ ticket.country }}</p>
             <hr>
+            <form method="post">
+                <button style="background-color: white; border:0px;" type="submit" id="{{ticket.id}}" name="button" value="{{ticket.id}}"><h2 style="height: 10px;">{{ ticket.title }}</h2></button>
+            </form>
+            <p>Date: {{ ticket.date }}</p>
+            <p>Country: {{ ticket.Country }}</p>
+                <!-- <button type="submit" id="{{ticket.id}}" name="button" value="{{ticket.id}}">Check all information about this tour</button> -->
         </div>
     {% endfor %}
 {% endblock %}

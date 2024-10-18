@@ -3,12 +3,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
+        {% block head %}
+        
+        {% endblock %}
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/tour/">Tour</a>
-        <a href="/login/">Login</a>
-        <a href="/registration/">Registration</a>
+        {% if not is_auth %}
+            <a href="/login/">Login</a>
+            <a href="/registration/">Registration</a>
+        {% else %}
+            <a href="/">Home</a>
+            <a href="/tour/">Tour</a>
+            <a href="/tours/">Tours</a>
+            {{ username }}
+        {% endif %}
         
         {% block content %}
 

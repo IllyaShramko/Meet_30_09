@@ -6,4 +6,20 @@
 
 {% block content %}
     <h1>Tour</h1>
+    {% if ticket_choosen %}
+        <div>
+            {% for ticket in ticket %}
+                <h2>{{ ticket.title }}</h2>
+                <p>Date: {{ ticket.date }}</p>
+                <p>Country: {{ ticket.Country }}</p>
+                <p>Price: {{ ticket.price }}</p>
+                <p>Discriprion: {{ ticket.descriprion }}</p>
+            {% endfor %}
+            
+        </div>
+    {% else %}
+        <h2>
+            You haven't choose any tour, but you can choose on <a href="/tours/">tours page</a>
+        </h2>
+    {% endif %}
 {% endblock %}
