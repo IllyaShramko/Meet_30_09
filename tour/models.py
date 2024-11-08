@@ -1,5 +1,4 @@
 from main.settings import DATABASE
-
 class Ticket(DATABASE.Model):
     id = DATABASE.Column(DATABASE.Integer(), primary_key = True)
 

@@ -2,7 +2,7 @@ import flask
 from main.settings import DATABASE
 from flask_login import current_user
 from .models import Ticket
-
+# 
 tour_id = 0
 ticket_choosen = False
 def render_tours():
