@@ -1,0 +1,36 @@
+h1 {
+
+    position: absolute;
+    width: 570px;
+    height: 116px;
+    
+    left: 35%;
+    top: 35%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 116px;
+
+    color: #000000;
+}
+.reg_login {
+    position: absolute;
+    width: 420  px;
+    height: 60px;
+    right: 1%;
+    top: 2%;
+    flex-direction: row;
+    
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    color: #000000;
+
+
+}
