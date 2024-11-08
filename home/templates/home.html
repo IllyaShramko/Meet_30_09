@@ -4,6 +4,10 @@
     Home
 {% endblock %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('home.static', filename = '/css/home.css')}}">
+{% endblock %}
+
 {% block content %}
     <h1>Home page</h1>
     {% if not is_auth %}
