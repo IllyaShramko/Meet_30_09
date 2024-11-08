@@ -9,13 +9,15 @@
     </head>
     <body>
         {% if not is_auth %}
-            <a href="/login/">Login</a>
-            <a href="/registration/">Registration</a>
+            <div class="reg_login">
+                <a href="/login/">Login</a>
+                <a href="/registration/">Registration</a>
+            </div>
         {% else %}
             <a href="/">Home</a>
             <a href="/tour/">Tour</a>
             <a href="/tours/">Tours</a>
-            {{ username }}
+            <p class="username">{{ username }}</p>
         {% endif %}
         
         {% block content %}
