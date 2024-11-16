@@ -10,19 +10,15 @@
 
 {% block content %}
     <h1>Home page</h1>
-    {% if not is_auth %}
-
-    {% else %}
-            <form method="post">
-                <p>enter your name</p>
-                <input type="text" name="client_name">
-                <p>enter your email</p>
-                <input type="email" name="client_email">
-                <p>enter your message</p>
-                <textarea name="message"></textarea>
-                <button type="submit">
-                    send
-                </button>
-            </form>
-    {% endif %}
+                <!-- <form method="post">
+                    <p>enter your name</p>
+                    <input type="text" name="client_name">
+                    <p>enter your email</p>
+                    <input type="email" name="client_email">
+                    <p>enter your message</p>
+                    <textarea name="message"></textarea>
+                    <button type="submit">
+                        send
+                    </button>
+                </form> -->
 {% endblock %}

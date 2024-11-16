@@ -4,21 +4,23 @@
     Tour
 {% endblock %}
 <!--  -->
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('tour.static', filename = '/css/tour.css')}}">
+{% endblock %}
+
 {% block content %}
-    <h1>Tour</h1>
     {% if ticket_choosen %}
-        <div>
+        <div class="ticket">
             {% for ticket in ticket %}
-                <h2>{{ ticket.title }}</h2>
-                <p>Date: {{ ticket.date }}</p>
-                <p>Country: {{ ticket.Country }}</p>
-                <p>Price: {{ ticket.price }}</p>
-                <p>Discriprion: {{ ticket.descriprion }}</p>
+                <h2 class="title">{{ ticket.title }}</h2>
+                <p class="date">Date: {{ ticket.date }}</p>
+                <p class="country">Country: {{ ticket.Country }}</p>
+                <p class="price">Price: {{ ticket.price }}</p>
+                <p class="description">Descriprion: {{ ticket.descriprion }}</p>
             {% endfor %}
-            
         </div>
     {% else %}
-        <h2>
+        <h2 class="nothing">
             You haven't choose any tour, but you can choose on <a href="/tours/">tours page</a>
         </h2>
     {% endif %}

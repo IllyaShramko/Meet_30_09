@@ -1,4 +1,4 @@
-<html lang="en">
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,13 @@
                 <a href="/registration/">Registration</a>
             </div>
         {% else %}
-            <a href="/">Home</a>
-            <a href="/tour/">Tour</a>
-            <a href="/tours/">Tours</a>
-            <p class="username">{{ username }}</p>
+            <div class="already_auth">
+                <a href="/" class="links1">Home</a>
+                <a href="/tour/" class="links2">Tour</a>
+                <a href="/tours/" class="links3">Tours</a>
+                <p class="username">{{ username }}</p>
+            </div>
+            
         {% endif %}
         
         {% block content %}

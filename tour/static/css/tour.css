@@ -1,0 +1,202 @@
+.already_auth {
+    /* Frame 3 */
+
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+}
+.links1 {
+    /* Tour */
+
+    position: absolute;
+    width: 169px;
+    height: 64px;
+    left: 40px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+}
+.links2 {
+    /* Tour */
+
+    position: absolute;
+    width: 169px;
+    height: 64px;
+    left: 240px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+}
+.links3 {
+    /* Tour */
+
+    position: absolute;
+    width: 169px;
+    height: 64px;
+    left: 440px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+}
+.username {
+
+    position: absolute;
+    width: 241px;
+    height: 58px;
+    right: 100px;
+    top: -15px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+
+    color: #000000;
+
+}
+.ticket {
+
+position: absolute;
+top: 13%;
+left: 4%;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* padding: 0px 25px; */
+gap: 0px;
+
+width: 720px;
+/* height: 340px; */
+
+border: 5px solid #000000;
+border-radius: 45px;
+
+
+}
+.title {
+
+position: relative;
+/* top: -20px;gi */
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 58px;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+margin: 5px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.date {
+    
+position: relative;
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 48px;
+line-height: 58px;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+margin: 5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.country {
+    
+position: relative;
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 48px;
+line-height: 58px;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+margin: 5px;
+
+
+}
+.price {
+    
+    
+position: relative;
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 48px;
+line-height: 58px;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+margin: 5px;
+}
+.description {
+    
+    
+position: relative;
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 48px;
+line-height: 58px;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+margin: 5px;
+
+
+}

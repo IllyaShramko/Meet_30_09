@@ -34,3 +34,90 @@ h1 {
 
 
 }
+.already_auth {
+    /* Frame 3 */
+
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+}
+.links1 {
+    /* Tour */
+
+    position: absolute;
+    width: 169px;
+    height: 64px;
+    left: 40px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+}
+.links2 {
+    /* Tour */
+
+    position: absolute;
+    width: 169px;
+    height: 64px;
+    left: 240px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+}
+.links3 {
+    /* Tour */
+
+    position: absolute;
+    width: 169px;
+    height: 64px;
+    left: 440px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+}
+.username {
+
+    position: absolute;
+    width: 241px;
+    height: 58px;
+    right: 100px;
+    top: -15px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+
+    color: #000000;
+
+}
