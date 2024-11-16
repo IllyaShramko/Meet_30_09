@@ -4,8 +4,12 @@
 Login
 {% endblock %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('user.static', filename= '/css/login.css') }}">
+{% endblock %}
+
 {% block content %}
-    <h1>Login Page</h1>
+    <h1 class="title">Login</h1>
     <form method="post">
         <p>username:</p>
         <input type="text" name="username">
